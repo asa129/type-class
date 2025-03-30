@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/__tests__/App.spec.tsx","./src/domain/todo.ts","./src/lib/todo.ts","./src/utils/supabase.ts","./jest.setup.ts"],"errors":true,"version":"5.7.3"}
