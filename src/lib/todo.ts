@@ -7,7 +7,8 @@ export const selectData: () => Promise<Todo[]> = async() => {
     throw new Error(response.error.message)
   }
   const responseData =response.data.map((res) => {
-    return new Todo(res.id, res.title, res.done, res.created_at);
+    // return new Todo(res.id, res.title, res.done, res.created_at);
+    return Todo.newTodo(res.id, res.title, res.done, res.created_at);
   })
 
   return responseData;
