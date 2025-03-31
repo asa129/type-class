@@ -13,18 +13,24 @@ import {
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>();
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const getData = async () => {
       const todoDatas = await selectData();
       setTodos(todoDatas);
+      setIsLoading(false);
     };
 
     getData();
   }, []);
 
+  if (isLoading) {
+    return <p>Loding....</p>;
+  }
+
   return (
     <>
-      <h1 data-testid="title">TODOリスト</h1>
+      <h1 data-testid="title"> TODOリスト </h1>
       <TableContainer>
         <Table variant="simple">
           <Thead>
